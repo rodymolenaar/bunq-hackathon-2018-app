@@ -7,7 +7,6 @@ import styled from "styled-components";
 import Header from "../../components/Header";
 import withHttp from "../../withHttp";
 import TouchableRipple from "react-native-paper/src/components/TouchableRipple";
-import SubTitle from "../../components/SubTitle";
 
 const Category = styled.View`
     padding-vertical: 14px;
@@ -29,7 +28,23 @@ const Description = styled.Text`
 `;
 
 @withHttp(false)
-class SelectCharitiesScreen extends React.Component {
+class CategoriesScreen extends React.Component {
+    state = {
+        categories: []
+    }
+
+    fetchCharities = () => {
+        this.props.http.get('/charities.json')
+            .then(response => response.data.categories)
+            .then(categories => this.props.onFetchCategories(categories))
+            .catch(error => console.error(error))
+    }
+
+
+    componentDidMount() {
+        this.fetchCharities()
+    }
+
     render() {
         return (
             <View>
@@ -47,14 +62,13 @@ class SelectCharitiesScreen extends React.Component {
                                 />
                             </View>
                         </View>
-                        <SubTitle>{this.props.navigation.state.params.category.name}</SubTitle>
                     </Container>
 
-                    {this.props.navigation.state.params.category.charities.map(category => (
-                        <TouchableRipple key={category.name} onPress={() => console.warn('Category selected')}>
+                    {this.state.categories.map(category => (
+                        <TouchableRipple key={category.name} onPress={() => this.props.navigation.navigate('SelectCharities', { category })}>
                             <Category>
                                 <Name>{category.name}</Name>
-                                <Icon name="check" size={24} color="#2f83c8" style={{position: 'absolute', right: 12, top: 12, bottom: 0, justifyContent: 'center'}}/>
+                                <Icon name="chevron-right" size={34} color="#727376" style={{position: 'absolute', right: 6, top: 6, bottom: 0, justifyContent: 'center'}}/>
                             </Category>
                         </TouchableRipple>
                     ))}
@@ -66,8 +80,8 @@ class SelectCharitiesScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 10,
+        paddingTop: 10
     }
 })
 
-export default SelectCharitiesScreen
+export default CategoriesScreen

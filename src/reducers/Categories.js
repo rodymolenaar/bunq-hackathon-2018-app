@@ -9,12 +9,10 @@ export default (state = [], action) => {
                 action.payload
             ]
         case ADD_CATEGORIES:
-            const categories = [
+            return [
                 ...state,
                 ...action.payload
             ]
-
-            return reverse(uniqBy(reverse(categories), 'id'))
         case UPDATE_CATEGORY:
             return state.map((item, index) => {
                 if (item.id !== action.payload.id) {

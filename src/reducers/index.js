@@ -1,13 +1,9 @@
-import Projects from './Projects'
 import Application from './Application'
 import Categories from './Categories'
-import Posts from './Posts'
-import Comments from './Comments'
+import Charities from "./Charities";
 
 export default {
     Application,
-    Projects,
     Categories,
-    Posts,
-    Comments,
+    Charities
 }

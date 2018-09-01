@@ -46,7 +46,7 @@ class CharitiesScreen extends React.Component {
                             <Title>Charities</Title>
                             <View style={{marginLeft: 'auto'}}>
                                 <Button
-                                    onPress={() => this.props.navigation.navigate('SelectCharities')}
+                                    onPress={() => this.props.navigation.navigate('Categories')}
                                     title="Edit"
                                     color="#841584"
                                     accessibilityLabel="Edit your selection of charities"

@@ -8,6 +8,7 @@ import CharitiesScreen from "./screens/Charities/Charities";
 import AddGoalScreen from "./screens/Goals/AddGoal";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import SelectCharitiesScreen from "./screens/Charities/SelectCharities";
+import CategoriesScreenContainer from "./containers/CategoriesScreenContainer";
 
 const GoalsStack = createStackNavigator({
     Goals: GoalsScreen,
@@ -25,6 +26,7 @@ GoalsStack.navigationOptions = {
 
 const CharitiesStack = createStackNavigator({
     Charities: CharitiesScreen,
+    Categories: CategoriesScreenContainer,
     SelectCharities: SelectCharitiesScreen
 }, {
     navigationOptions: {

@@ -27,6 +27,8 @@
     "react-native-paper": "^1.11.1",
     "react-native-vector-icons": "^5.0.0",
     "react-navigation": "^2.12.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
     "styled-components": "^3.4.5"
   }
 }
