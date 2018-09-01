@@ -1,11 +1,22 @@
 import React from "react";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import {Text, SafeAreaView, StyleSheet, View, Button, Picker, TextInput, TouchableOpacity} from "react-native";
+import {
+    Text,
+    SafeAreaView,
+    StyleSheet,
+    View,
+    Button,
+    Picker,
+    TextInput,
+    TouchableOpacity,
+    ActivityIndicator, Image, ScrollView
+} from "react-native";
 import styled from 'styled-components'
 import Title from "../../../components/Title";
 import Container from "../../../components/Container";
 import {TouchableRipple} from "react-native-paper";
 import Header from "../../../components/Header";
+import withHttp from "../../../withHttp";
 
 const Merchant = styled.View`
     padding-vertical: 16px;
@@ -28,9 +39,32 @@ const Description = styled.Text`
 `
 
 class SelectMerchantScreen extends React.Component {
+    state = {
+        loading: true
+    }
+
+    pick = merchant => {
+        this.props.setNewGoal({
+            ...this.props.newGoal,
+            merchant
+        })
+    }
+
+    fetchMerchants = () => {
+        this.props.http.get('/merchants')
+            .then(response => response.data.payload)
+            .then(merchants => this.props.onFetchMerchants(merchants))
+            .then(() => this.setState({ loading: false }))
+    }
+
+    componentDidMount() {
+        console.log(this.props)
+        this.fetchMerchants()
+    }
+
     render() {
         return (
-            <View>
+            <View style={{flexGrow: 1}}>
                 <Header
                     left={
                         <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
@@ -38,26 +72,39 @@ class SelectMerchantScreen extends React.Component {
                         </TouchableOpacity>
                     }
                 />
+                <ScrollView style={{flexGrow: 1}}>
                 <View style={{paddingTop: 10}}>
                     <Container>
                         <Title>Select merchant</Title>
                     </Container>
 
-                    <TouchableRipple onPress={() => console.warn('More, Less, About the same')}>
-                        <Merchant>
-                            <View>
-                                <Text>AH TO GO 8643</Text>
-                                <Description>NL83 INGB 0882 839 293</Description>
-                            </View>
-                            <View style={{marginLeft: 'auto', alignItems: 'center', justifyContent: 'center'}}>
-                                <Value>0,01</Value>
-                            </View>
-                        </Merchant>
-                    </TouchableRipple>
+                    {this.state.loading && (
+                        <View>
+                            <ActivityIndicator />
+                        </View>
+                    )}
+
+                    {this.props.merchants.map(merchant => (
+                        <TouchableRipple key={merchant.id} onPress={() => this.pick(merchant)}>
+                            <Merchant>
+                                <View style={{marginRight: 16, alignItems: 'center', justifyContent: 'center'}}>
+                                    <Image source={{ uri: merchant.image_url, headers: {
+                                            Authorization: 'Bearer ' + this.props.token,
+                                        }, }} style={{width: 30, height: 30, borderRadius: 99999}} />
+                                </View>
+                                <View>
+                                    <Text>{merchant.name}</Text>
+                                    <Description>{merchant.description}</Description>
+                                </View>
+                                {this.props.newGoal.merchant && this.props.newGoal.merchant.id === merchant.id && <Icon name="check" size={24} color="#2f83c8" style={{position: 'absolute', right: 12, top: 20, bottom: 0, justifyContent: 'center'}}/>}
+                            </Merchant>
+                        </TouchableRipple>
+                    ))}
                 </View>
+                </ScrollView>
             </View>
         );
     }
 }
 
-export default SelectMerchantScreen
+export default withHttp()(SelectMerchantScreen)

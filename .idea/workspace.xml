@@ -2,107 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0dea357-9e8a-4521-b54b-1e7b211064f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/Goals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NoApiKey.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/AddGoalContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/SelectCharitiesContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/SelectOperatorContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/SelectPeriodContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/Goals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/Auth/Loading.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/Auth/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/Auth/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectMerchant.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectOperator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectPeriod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/More/About.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/More/ApiKey.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/More/More.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/Merchants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/MerchantsScreenContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/SelectMerchantScreenContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/Merchants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTActionSheet.build/Debug-iphonesimulator/RCTActionSheet.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTActionSheet.build/Debug-iphonesimulator/RCTActionSheet.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTAnimation.build/Debug-iphonesimulator/RCTAnimation.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTAnimation.build/Debug-iphonesimulator/RCTAnimation.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTBlob.build/Debug-iphonesimulator/RCTBlob.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTBlob.build/Debug-iphonesimulator/RCTBlob.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTGeolocation.build/Debug-iphonesimulator/RCTGeolocation.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTGeolocation.build/Debug-iphonesimulator/RCTGeolocation.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTImage.build/Debug-iphonesimulator/RCTImage.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTImage.build/Debug-iphonesimulator/RCTImage.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTLinking.build/Debug-iphonesimulator/RCTLinking.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTLinking.build/Debug-iphonesimulator/RCTLinking.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTNetwork.build/Debug-iphonesimulator/RCTNetwork.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTNetwork.build/Debug-iphonesimulator/RCTNetwork.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTSettings.build/Debug-iphonesimulator/RCTSettings.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTSettings.build/Debug-iphonesimulator/RCTSettings.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTText.build/Debug-iphonesimulator/RCTText.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTText.build/Debug-iphonesimulator/RCTText.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTVibration.build/Debug-iphonesimulator/RCTVibration.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTVibration.build/Debug-iphonesimulator/RCTVibration.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTWebSocket.build/Debug-iphonesimulator/RCTWebSocket.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTWebSocket.build/Debug-iphonesimulator/RCTWebSocket.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTWebSocket.build/Debug-iphonesimulator/fishhook.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RCTWebSocket.build/Debug-iphonesimulator/fishhook.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RNVectorIcons.build/Debug-iphonesimulator/RNVectorIcons.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/RNVectorIcons.build/Debug-iphonesimulator/RNVectorIcons.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/cxxreact.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/cxxreact.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/double-conversion.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/double-conversion.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/jschelpers.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/jschelpers.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/jsinspector.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/jsinspector.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/privatedata.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/privatedata.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/third-party.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/third-party.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/yoga.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/yoga.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/hackathon.build/Debug-iphonesimulator/hackathon.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/hackathon.build/Debug-iphonesimulator/hackathon.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/hackathon.build/Debug-iphonesimulator/hackathonTests.build/dgph" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Intermediates.noindex/hackathon.build/Debug-iphonesimulator/hackathonTests.build/dgph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/hackathon.app/PlugIns/hackathonTests.xctest/hackathonTests" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/hackathon.app/PlugIns/hackathonTests.xctest/hackathonTests" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/hackathon.app/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/hackathon.app/_CodeSignature/CodeResources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/hackathon.app/hackathon" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/hackathon.app/hackathon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/libReact.a" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/libReact.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/libcxxreact.a" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/libcxxreact.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/libjschelpers.a" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/libjschelpers.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/libthird-party.a" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Build/Products/Debug-iphonesimulator/libthird-party.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/Conv.o-NY53OQVQAMGC" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/Conv.o-NY53OQVQAMGC" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/CxxNativeModule.o-3RI22068ZI6H4" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/CxxNativeModule.o-3RI22068ZI6H4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/Instance.o-33WGFOJN8JFGB" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/Instance.o-33WGFOJN8JFGB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSBigString.o-INMYBH8NHJ5V" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSBigString.o-INMYBH8NHJ5V" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSCExecutor.o-33D2RKMDC2JIQ" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSCExecutor.o-33D2RKMDC2JIQ" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSCHelpers.o-39DL44QX6PV76" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSCHelpers.o-39DL44QX6PV76" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSCNativeModules.o-1AV1WRQU8OUHS" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSCNativeModules.o-1AV1WRQU8OUHS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSCSamplingProfiler.o-11K5IC50JOIFU" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSCSamplingProfiler.o-11K5IC50JOIFU" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSCUtils.o-30KLP5W27BKPB" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSCUtils.o-30KLP5W27BKPB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSCWrapper.o-2FO7AHRYM873X" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSCWrapper.o-2FO7AHRYM873X" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSIndexedRAMBundle.o-23UUN1LCQ2M2L" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/JSIndexedRAMBundle.o-23UUN1LCQ2M2L" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/MethodCall.o-3KMIR75VLBI6W" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/MethodCall.o-3KMIR75VLBI6W" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/ModuleRegistry.o-36NHZMKJFQXPY" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/ModuleRegistry.o-36NHZMKJFQXPY" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/NSDataBigString.o-1VTW287VS82MW" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/NSDataBigString.o-1VTW287VS82MW" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/NativeToJsBridge.o-EM0KFWF3CAP8" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/NativeToJsBridge.o-EM0KFWF3CAP8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/Platform.o-L4BY9W56LKOR" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/Platform.o-L4BY9W56LKOR" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTCxxBridge.o-L3UR48LJF584" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTCxxBridge.o-L3UR48LJF584" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTCxxMethod.o-2JJWMLNJVBEYL" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTCxxMethod.o-2JJWMLNJVBEYL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTCxxModule.o-14MJDZLQ7NJPG" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTCxxModule.o-14MJDZLQ7NJPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTCxxUtils.o-2XD6061ZSKPM8" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTCxxUtils.o-2XD6061ZSKPM8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTFollyConvert.o-202MV7QTAA5RX" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTFollyConvert.o-202MV7QTAA5RX" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTJSCHelpers.o-3PDS8L4XAC2QG" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTJSCHelpers.o-3PDS8L4XAC2QG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTMessageThread.o-39QB1JO75KJOK" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTMessageThread.o-39QB1JO75KJOK" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTNativeModule.o-3G9LN3T26ZVQP" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTNativeModule.o-3G9LN3T26ZVQP" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTObjcExecutor.o-3J570SEWSXXSJ" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/RCTObjcExecutor.o-3J570SEWSXXSJ" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/SampleCxxModule.o-1YM2RW9MYBPWF" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/SampleCxxModule.o-1YM2RW9MYBPWF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/StringBase.o-2ZLF98MHFXIU1" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/StringBase.o-2ZLF98MHFXIU1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/Value.o-23BWEHKMHPFA7" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/Value.o-23BWEHKMHPFA7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/demangle-7B942820D95A2665.o-NBBUUT9KTJ3D" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/demangle-7B942820D95A2665.o-NBBUUT9KTJ3D" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/dynamic.o-19CLXTE8RXSC" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/dynamic.o-19CLXTE8RXSC" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/json.o-24KAR17YLFSL3" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/json.o-24KAR17YLFSL3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/logging.o-2U9DY5R59TIOI" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/logging.o-2U9DY5R59TIOI" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/raw_logging.o-I2N7E452OMLO" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/raw_logging.o-I2N7E452OMLO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/signalhandler.o-32PCXR71ZZ6YQ" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/signalhandler.o-32PCXR71ZZ6YQ" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/symbolize.o-2IJ3ETW23X1VY" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/symbolize.o-2IJ3ETW23X1VY" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/utilities.o-11LWPF0VLXSOX" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/utilities.o-11LWPF0VLXSOX" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/vlog_is_on.o-K38ZH46C0K42" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Index/DataStore/v5/units/vlog_is_on.o-K38ZH46C0K42" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/Logs/Build/Cache.db" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/Logs/Build/Cache.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/build/info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/build/info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TokenService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TokenService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/Application.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/Application.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/CategoriesScreenContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CategoriesScreenContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/CommentsContainer.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/Application.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/Application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Charities/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Charities/Categories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Charities/Charities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Charities/Charities.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Charities/SelectCharities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Charities/SelectCharities.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Goals/AddGoal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Goals/AddGoal/AddGoal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Goals/Goals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Goals/Goals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Goals/AddGoal/AddGoal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Goals/AddGoal/AddGoal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectMerchant.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectMerchant.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/Merchants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Merchants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Settings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -125,25 +36,25 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="babelrc" value="1" />
-          <entry key="js" value="114" />
+          <entry key="js" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="114" />
+          <entry key="JavaScript" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="babelrc" value="32" />
-          <entry key="js" value="17151" />
+          <entry key="js" value="18703" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="32" />
-          <entry key="JavaScript" value="17151" />
+          <entry key="JavaScript" value="18703" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -155,10 +66,58 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screens/More/About.js">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="72" column="13" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/screens/Merchants.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="66" column="61" lean-forward="true" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectMerchant.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/Goals.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="23">
-              <caret line="6" column="30" lean-forward="true" selection-end-line="42" selection-end-column="26" />
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/screens/Goals/AddGoal/AddGoal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="81" column="142" lean-forward="true" selection-start-line="81" selection-start-column="142" selection-end-line="81" selection-end-column="142" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,22 +135,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screens/Goals/Goals.js">
+        <entry file="file://$PROJECT_DIR$/src/reducers/Application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="49" column="50" lean-forward="true" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="163">
+              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/CategoriesScreenContainer.js">
+        <entry file="file://$PROJECT_DIR$/src/containers/SelectMerchantScreenContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="112">
+              <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/SelectOperatorContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" selection-start-line="4" selection-end-line="16" selection-end-column="1" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -211,66 +176,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/SelectOperatorContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="9" lean-forward="true" selection-end-line="23" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screens/Charities/SelectCharities.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="57" column="43" lean-forward="true" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screens/Merchants.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screens/Charities/Charities.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -285,6 +190,7 @@
       <find>&lt;</find>
       <find>categories</find>
       <find>store.state</find>
+      <find>Merchants</find>
     </findStrings>
     <replaceStrings>
       <replace>store.getState()</replace>
@@ -296,9 +202,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/App.js" />
-        <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/src/components/Title.js" />
         <option value="$PROJECT_DIR$/src/components/Container.js" />
         <option value="$PROJECT_DIR$/src/screens/Goals.js" />
@@ -311,21 +214,17 @@
         <option value="$PROJECT_DIR$/src/actions/Charities.js" />
         <option value="$PROJECT_DIR$/src/reducers/Categories.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
-        <option value="$PROJECT_DIR$/src/store/index.js" />
         <option value="$PROJECT_DIR$/src/screens/Settings.js" />
         <option value="$PROJECT_DIR$/src/components/Header.js" />
         <option value="$PROJECT_DIR$/src/screens/About.js" />
         <option value="$PROJECT_DIR$/src/screens/More.js" />
         <option value="$PROJECT_DIR$/src/screens/Goals/AddGoal.js" />
-        <option value="$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectMerchant.js" />
         <option value="$PROJECT_DIR$/src/withHttp.js" />
         <option value="$PROJECT_DIR$/src/screens/More/More.js" />
         <option value="$PROJECT_DIR$/src/actions/Goals.js" />
         <option value="$PROJECT_DIR$/src/reducers/Goals.js" />
-        <option value="$PROJECT_DIR$/src/actions/index.js" />
         <option value="$PROJECT_DIR$/src/actions/Application.js" />
         <option value="$PROJECT_DIR$/src/containers/AddGoalContainer.js" />
-        <option value="$PROJECT_DIR$/src/reducers/Application.js" />
         <option value="$PROJECT_DIR$/src/containers/SelectOperatorContainer.js" />
         <option value="$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectOperator.js" />
         <option value="$PROJECT_DIR$/src/screens/Charities/Categories.js" />
@@ -334,17 +233,26 @@
         <option value="$PROJECT_DIR$/src/TokenService.js" />
         <option value="$PROJECT_DIR$/src/screens/Auth/Login.js" />
         <option value="$PROJECT_DIR$/src/screens/Auth/Register.js" />
-        <option value="$PROJECT_DIR$/src/screens/Goals/AddGoal/AddGoal.js" />
         <option value="$PROJECT_DIR$/src/screens/More/ApiKey.js" />
         <option value="$PROJECT_DIR$/src/components/NoApiKey.js" />
         <option value="$PROJECT_DIR$/src/screens/Auth/Loading.js" />
         <option value="$PROJECT_DIR$/src/screens/Goals/Goals.js" />
-        <option value="$PROJECT_DIR$/src/screens/Merchants.js" />
         <option value="$PROJECT_DIR$/src/screens/Charities/Charities.js" />
         <option value="$PROJECT_DIR$/src/containers/CategoriesScreenContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/SelectCharitiesContainer.js" />
         <option value="$PROJECT_DIR$/src/screens/Charities/SelectCharities.js" />
+        <option value="$PROJECT_DIR$/src/reducers/Merchants.js" />
+        <option value="$PROJECT_DIR$/src/actions/Merchants.js" />
+        <option value="$PROJECT_DIR$/src/actions/index.js" />
+        <option value="$PROJECT_DIR$/src/store/index.js" />
+        <option value="$PROJECT_DIR$/src/components/CachedRemoteImage.js" />
+        <option value="$PROJECT_DIR$/src/containers/MerchantsScreenContainer.js" />
+        <option value="$PROJECT_DIR$/src/screens/Merchants.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/reducers/Application.js" />
+        <option value="$PROJECT_DIR$/src/containers/SelectMerchantScreenContainer.js" />
+        <option value="$PROJECT_DIR$/src/screens/Goals/AddGoal/AddGoal.js" />
+        <option value="$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectMerchant.js" />
       </list>
     </option>
   </component>
@@ -389,33 +297,19 @@
               <item name="bunq" type="b2602c69:ProjectViewProjectNode" />
               <item name="bunq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bunq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bunq" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bunq" type="b2602c69:ProjectViewProjectNode" />
               <item name="bunq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bunq" type="b2602c69:ProjectViewProjectNode" />
               <item name="bunq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="Auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bunq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bunq" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="Charities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bunq" type="b2602c69:ProjectViewProjectNode" />
@@ -429,7 +323,8 @@
               <item name="bunq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="More" type="462c0819:PsiDirectoryNode" />
+              <item name="Goals" type="462c0819:PsiDirectoryNode" />
+              <item name="AddGoal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bunq" type="b2602c69:ProjectViewProjectNode" />
@@ -489,7 +384,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35539000" />
+    <option name="totallyTimeSpent" value="39128000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -521,13 +416,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -582,16 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/Categories.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -618,30 +496,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectMerchant.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-native/Libraries/Components/TextInput/TextInput.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="491" column="4" selection-start-line="491" selection-start-column="4" selection-end-line="491" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -662,27 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/Goals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/Goals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/CommentsContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -690,13 +527,6 @@
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/Application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -711,16 +541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="16" column="29" lean-forward="true" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/AddGoalContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -761,13 +581,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/SelectPeriodContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -818,16 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/Goals/AddGoal/AddGoal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="49" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/Auth/Login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -842,26 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="6" column="30" lean-forward="true" selection-end-line="42" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectOperator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="206" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/Merchants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -885,10 +668,149 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/Charities/SelectCharities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/SelectPeriodContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/CategoriesScreenContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="393">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/AddGoalContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="9" lean-forward="true" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/Categories.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="32" column="24" lean-forward="true" selection-end-line="34" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/Goals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/Merchants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/Merchants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/MerchantsScreenContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CachedRemoteImage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/Merchants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="66" column="61" lean-forward="true" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/Goals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/Application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/SelectOperatorContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="16" selection-end-column="1" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -905,30 +827,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/SelectOperatorContainer.js">
+    <entry file="file://$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectOperator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="9" lean-forward="true" selection-end-line="23" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/Charities/SelectCharities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+        <state relative-caret-position="332">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="206" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/containers/SelectMerchantScreenContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="57" column="43" lean-forward="true" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="44" />
+        <state relative-caret-position="112">
+          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/Goals/AddGoal/AddGoal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="81" column="142" lean-forward="true" selection-start-line="81" selection-start-column="142" selection-end-line="81" selection-end-column="142" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/Goals/AddGoal/SelectMerchant.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

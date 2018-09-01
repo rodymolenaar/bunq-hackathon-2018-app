@@ -2,6 +2,8 @@ import { compose, combineReducers, createStore, applyMiddleware } from 'redux'
 import application from '../reducers/Application'
 import categories from '../reducers/Categories'
 import charities from '../reducers/Charities'
+import goals from '../reducers/Goals'
+import merchants from '../reducers/Merchants'
 
 const middleware = []
 
@@ -11,6 +13,8 @@ const store = createStore(combineReducers({
     application,
     categories,
     charities,
+    goals,
+    merchants
 }), composeEnhancers(applyMiddleware(...middleware)))
 
 export default store

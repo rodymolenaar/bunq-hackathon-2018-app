@@ -24,6 +24,8 @@ import SelectOperatorScreenContainer from "./containers/SelectOperatorContainer"
 import withHttp from "./withHttp";
 import SelectPeriodScreenContainer from "./containers/SelectPeriodContainer";
 import SelectCharitiesScreenContainer from "./containers/SelectCharitiesContainer";
+import MerchantsScreenContainer from "./containers/MerchantsScreenContainer";
+import SelectMerchantScreenContainer from "./containers/SelectMerchantScreenContainer";
 
 const AddGoalStack = createStackNavigator({
     Charities: CharitiesScreen,
@@ -39,7 +41,7 @@ const GoalsStack = createStackNavigator({
     Goals: GoalsScreen,
     AddGoal: AddGoalScreenContainer,
     SelectOperator: SelectOperatorScreenContainer,
-    SelectMerchant: SelectMerchantScreen,
+    SelectMerchant: SelectMerchantScreenContainer,
     SelectPeriod: SelectPeriodScreenContainer
 }, {
     navigationOptions: {
@@ -68,7 +70,7 @@ CharitiesStack.navigationOptions = {
 }
 
 const MerchantsStack = createStackNavigator({
-    Merchants: MerchantsScreen
+    Merchants: MerchantsScreenContainer
 }, {
     navigationOptions: {
         header: null

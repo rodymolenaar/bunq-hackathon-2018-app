@@ -1,11 +1,12 @@
 import React from "react";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import {Text, View, SafeAreaView, StyleSheet, ScrollView} from "react-native";
+import {Text, View, SafeAreaView, StyleSheet, ScrollView, Image, ActivityIndicator} from "react-native";
 import Title from "../components/Title";
 import Container from "../components/Container";
 import styled from "styled-components";
 import Header from "../components/Header";
 import NoApiKey from "../components/NoApiKey";
+import withHttp from "../withHttp";
 
 const Merchant = styled.View`
     padding-vertical: 16px;
@@ -28,6 +29,21 @@ const Description = styled.Text`
 `
 
 class MerchantsScreen extends React.Component {
+    state = {
+        loading: true
+    }
+
+    fetchMerchants = () => {
+        this.props.http.get('/merchants')
+            .then(response => response.data.payload)
+            .then(merchants => this.props.onFetchMerchants(merchants))
+            .then(() => this.setState({ loading: false }))
+    }
+
+    componentDidMount() {
+        this.fetchMerchants()
+    }
+
     render() {
         return (
             <View style={{flexGrow: 1}}>
@@ -40,15 +56,25 @@ class MerchantsScreen extends React.Component {
                             <Text>You've previously sent money to these accounts.</Text>
                         </Container>
 
-                        <Merchant>
+                        {this.state.loading && (
                             <View>
-                                <Text>AH TO GO 8643</Text>
-                                <Description>NL83 INGB 0882 839 293</Description>
+                                <ActivityIndicator />
                             </View>
-                            <View style={{marginLeft: 'auto', alignItems: 'center', justifyContent: 'center'}}>
-                                <Value>0,01</Value>
-                            </View>
-                        </Merchant>
+                        )}
+
+                        {this.props.merchants.map(merchant => (
+                            <Merchant key={merchant.id}>
+                                <View style={{marginRight: 16, alignItems: 'center', justifyContent: 'center'}}>
+                                    <Image source={{ uri: merchant.image_url, headers: {
+                                            Authorization: 'Bearer ' + this.props.token,
+                                        }, }} style={{width: 30, height: 30, borderRadius: 99999}} />
+                                </View>
+                                <View>
+                                    <Text>{merchant.name}</Text>
+                                    <Description>{merchant.description}</Description>
+                                </View>
+                            </Merchant>
+                        ))}
                     </View>
                 </ScrollView>
             </View>
@@ -62,4 +88,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default MerchantsScreen
+export default withHttp()(MerchantsScreen)

@@ -6,7 +6,7 @@ const initialState = {
     newGoal: {
         operator: null,
         amount: null,
-        transaction_id: null,
+        merchant: null,
         period: null
     }
 }

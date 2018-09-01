@@ -6,6 +6,7 @@ import Title from "../../../components/Title";
 import Container from "../../../components/Container";
 import {TouchableRipple} from "react-native-paper";
 import Header from "../../../components/Header";
+import {NavigationEvents} from "react-navigation";
 
 const Input = styled.View`
     padding-vertical: 14px;
@@ -78,7 +79,7 @@ class AddGoalScreen extends React.Component {
                                 <Text style={{fontSize: 16}}>On</Text>
                             </View>
                             <View style={{marginLeft: 'auto'}}>
-                                <Text style={{fontSize: 16, color: '#727376'}}>Select</Text>
+                                {this.props.newGoal.merchant ? <Text style={{fontSize: 16, color: '#2f83c8'}}>{this.props.newGoal.merchant.name}</Text> : <Text style={{fontSize: 16, color: '#727376'}}>Select</Text>}
                             </View>
                         </Input>
                     </TouchableRipple>

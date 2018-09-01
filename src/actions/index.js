@@ -25,6 +25,8 @@ export const ADD_GOALS = 'ADD_GOALS'
 export const ADD_GOAL = 'ADD_GOAL'
 export const UPDATE_GOAL = 'UPDATE_GOAL'
 
+export const SET_MERCHANTS = 'SET_MERCHANTS'
+
 export * from './Application'
 export * from './Categories'
 export * from './Charities'
