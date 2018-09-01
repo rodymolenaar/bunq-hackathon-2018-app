@@ -1,11 +1,12 @@
 import React from "react";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import {Text, View, SafeAreaView, StyleSheet, Button, ScrollView} from "react-native";
+import {Text, View, SafeAreaView, StyleSheet, Button, ScrollView, ActivityIndicator, Image} from "react-native";
 import Title from "../../components/Title";
 import Container from "../../components/Container";
 import styled from "styled-components";
 import Header from "../../components/Header";
 import NoApiKey from "../../components/NoApiKey";
+import withHttp from "../../withHttp";
 
 const Charity = styled.View`
     padding-vertical: 14px;
@@ -28,13 +29,18 @@ const Description = styled.Text`
 
 class CharitiesScreen extends React.Component {
     state = {
-        charities: [
-            {
-                id: 1,
-                name: 'Longfonds',
-                iban: 'NL95INGB0000055055'
-            }
-        ]
+        loading: true
+    }
+
+    fetchCharities = () => {
+        this.props.http.get('/charities')
+            .then(response => response.data.payload)
+            .then(charities => this.props.onFetchCategories(charities))
+            .then(() => this.setState({ loading: false }))
+    }
+
+    componentDidMount() {
+        this.fetchCharities()
     }
 
     render() {
@@ -63,7 +69,13 @@ class CharitiesScreen extends React.Component {
 
                         </Container>
 
-                        {this.state.charities.map(charity => (
+                        {this.state.loading && (
+                            <View>
+                                <ActivityIndicator />
+                            </View>
+                        )}
+
+                        {this.props.charities.map(charity => (
                             <Charity key={charity.id}>
                                 <Name>{charity.name}</Name>
                                 <Description>{charity.iban}</Description>
@@ -82,4 +94,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default CharitiesScreen
+export default withHttp()(CharitiesScreen)

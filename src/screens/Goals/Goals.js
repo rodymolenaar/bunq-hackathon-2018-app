@@ -1,12 +1,13 @@
 import React from "react";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import {Text, SafeAreaView, StyleSheet, View, Button, AsyncStorage, ScrollView} from "react-native";
+import {Text, SafeAreaView, StyleSheet, View, Button, AsyncStorage, ScrollView, ActivityIndicator} from "react-native";
 import styled from 'styled-components'
 import Title from "../../components/Title";
 import Container from "../../components/Container";
 import Header from "../../components/Header";
 import bunqColors from '../../bunqColors'
 import NoApiKey from "../../components/NoApiKey";
+import withHttp from "../../withHttp";
 
 const Card = styled.View`
     padding: 16px;
@@ -17,28 +18,18 @@ const Card = styled.View`
 
 class GoalsScreen extends React.Component {
     state = {
-        goals: [
-            {
-                id: 1,
-                title: 'Spend less than €20,-',
-                description: 'on AH TO GO 8634'
-            },
-            {
-                id: 2,
-                title: 'Spend less than €20,-',
-                description: 'on AH TO GO 8634'
-            },
-            {
-                id: 3,
-                title: 'Spend less than €20,-',
-                description: 'on AH TO GO 8634'
-            },
-            {
-                id: 4,
-                title: 'Spend less than €20,-',
-                description: 'on AH TO GO 8634'
-            }
-        ],
+        loading: true
+    }
+
+    fetchGoals = () => {
+        this.props.http.get('/goals')
+            .then(response => response.data.payload)
+            .then(goals => this.props.onFetchGoals(goals))
+            .then(() => this.setState({ loading: false }))
+    }
+
+    componentDidMount() {
+        this.fetchGoals()
     }
 
     colorIndex = 0
@@ -62,7 +53,14 @@ class GoalsScreen extends React.Component {
                                     />
                                 </View>
                             </View>
-                            {this.state.goals.map(goal => {
+
+                            {this.state.loading && (
+                                <View>
+                                    <ActivityIndicator />
+                                </View>
+                            )}
+
+                            {this.props.goals.map(goal => {
                                 if (this.colorIndex > (bunqColors.length - 1)) {
                                     this.colorIndex = 0;
                                 }
@@ -95,4 +93,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default GoalsScreen
+export default withHttp()(GoalsScreen)

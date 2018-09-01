@@ -1,4 +1,4 @@
-import { ADD_CHARITIES, UPDATE_CHARITY } from '../actions'
+import {ADD_CHARITIES, SET_CHARITIES, UPDATE_CHARITY} from '../actions'
 
 export default (state = [], action) => {
     switch (action.type) {
@@ -7,6 +7,8 @@ export default (state = [], action) => {
                 ...state,
                 ...action.payload
             ]
+        case SET_CHARITIES:
+            return action.payload
         case UPDATE_CHARITY:
             return state.map((item, index) => {
                 if (item.id !== action.payload.id) {

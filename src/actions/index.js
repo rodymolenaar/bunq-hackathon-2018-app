@@ -17,6 +17,7 @@ export const UPDATE_CATEGORY = 'UPDATE_CATEGORY'
 // Charities
 
 export const ADD_CHARITIES = 'ADD_CHARITIES'
+export const SET_CHARITIES = 'SET_CHARITIES'
 export const UPDATE_CHARITY = 'UPDATE_CHARITY'
 
 // Goals

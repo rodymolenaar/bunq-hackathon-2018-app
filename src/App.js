@@ -26,6 +26,8 @@ import SelectPeriodScreenContainer from "./containers/SelectPeriodContainer";
 import SelectCharitiesScreenContainer from "./containers/SelectCharitiesContainer";
 import MerchantsScreenContainer from "./containers/MerchantsScreenContainer";
 import SelectMerchantScreenContainer from "./containers/SelectMerchantScreenContainer";
+import CharitiesScreenContainer from "./containers/CharitiesScreen";
+import GoalsScreenContainer from "./containers/GoalsContainer";
 
 const AddGoalStack = createStackNavigator({
     Charities: CharitiesScreen,
@@ -38,7 +40,7 @@ const AddGoalStack = createStackNavigator({
 });
 
 const GoalsStack = createStackNavigator({
-    Goals: GoalsScreen,
+    Goals: GoalsScreenContainer,
     AddGoal: AddGoalScreenContainer,
     SelectOperator: SelectOperatorScreenContainer,
     SelectMerchant: SelectMerchantScreenContainer,
@@ -55,7 +57,7 @@ GoalsStack.navigationOptions = {
 }
 
 const CharitiesStack = createStackNavigator({
-    Charities: CharitiesScreen,
+    Charities: CharitiesScreenContainer,
     Categories: CategoriesScreenContainer,
     SelectCharities: SelectCharitiesScreenContainer
 }, {

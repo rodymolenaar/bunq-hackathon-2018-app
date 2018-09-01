@@ -1,17 +1,18 @@
 import { connect } from 'react-redux'
-import {setNewGoal} from "../actions";
+import {setNewGoal, updateCharity} from "../actions";
 import SelectCharitiesScreen from "../screens/Charities/SelectCharities";
 
 const mapStateToProps = (state, { navigation }) => {
     return {
-        charities: state.charities.filter(charity => charity.category === navigation.state.params.category.name)
+        charities: state.charities.filter(charity => charity.category === navigation.state.params.category.name),
+        selectedCharities: state.charities.filter(charity => charity.selected)
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onUpdateCharity: goal => {
-            dispatch(updateCharity(goal))
+        onUpdateCharity: charity => {
+            dispatch(updateCharity(charity))
         }
     }
 }

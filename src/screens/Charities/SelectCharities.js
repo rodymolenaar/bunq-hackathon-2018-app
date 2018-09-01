@@ -29,6 +29,28 @@ const Description = styled.Text`
 `;
 
 class SelectCharitiesScreen extends React.Component {
+    pick = charity => {
+        if (charity.selected) {
+            this.props.onUpdateCharity({
+                id: charity.id,
+                selected: false
+            })
+        } else {
+            this.props.onUpdateCharity({
+                id: charity.id,
+                selected: true
+            })
+        }
+
+        setInterval(() => {
+            this.props.http.patch('/account/charities', {
+                charities: this.props.selectedCharities.map(charity => charity.id)
+            })
+        }, 500);
+
+
+    }
+
     render() {
         return (
             <View>
@@ -45,11 +67,11 @@ class SelectCharitiesScreen extends React.Component {
                         <SubTitle>{this.props.navigation.state.params.category.name}</SubTitle>
                     </Container>
 
-                    {this.props.charities.map(category => (
-                        <TouchableRipple key={category.name} onPress={() => console.warn('Category selected')}>
+                    {this.props.charities.map(charity => (
+                        <TouchableRipple key={charity.name} onPress={() => this.pick(charity)}>
                             <Category>
-                                <Name>{category.name}</Name>
-                                <Icon name="check" size={24} color="#2f83c8" style={{position: 'absolute', right: 12, top: 12, bottom: 0, justifyContent: 'center'}}/>
+                                <Name>{charity.name}</Name>
+                                {charity.selected && <Icon name="check" size={24} color="#2f83c8" style={{position: 'absolute', right: 12, top: 12, bottom: 0, justifyContent: 'center'}}/>}
                             </Category>
                         </TouchableRipple>
                     ))}

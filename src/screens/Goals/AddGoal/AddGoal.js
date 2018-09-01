@@ -7,6 +7,7 @@ import Container from "../../../components/Container";
 import {TouchableRipple} from "react-native-paper";
 import Header from "../../../components/Header";
 import {NavigationEvents} from "react-navigation";
+import withHttp from "../../../withHttp";
 
 const Input = styled.View`
     padding-vertical: 14px;
@@ -24,6 +25,26 @@ class AddGoalScreen extends React.Component {
             ...this.props.newGoal,
             amount: text
         })
+    }
+
+    isReady = () => {
+        let { operator, amount, merchant, period } = this.props.newGoal
+
+        return operator && merchant && period && amount.length > 0
+    }
+
+    save = () => {
+        let { operator, amount, merchant, period } = this.props.newGoal;
+
+        this.props.http.post('/goal', {
+            operator,
+            amount: parseInt(amount) * 100,
+            merchant_id: merchant.id,
+            period
+        })
+        .then(response => response.data.payload)
+        .then(goal => this.onCreateGoal(goal))
+
     }
 
     render() {
@@ -44,7 +65,8 @@ class AddGoalScreen extends React.Component {
                             </View>
                             <View style={{flexDirection: 'row', marginLeft: 'auto'}}>
                                 <Button
-                                    onPress={() => console.warn('Edit')}
+                                    disabled={!this.isReady()}
+                                    onPress={this.save}
                                     title="Save"
                                     color="#2f83c7"
                                     accessibilityLabel="Save your new goal"
@@ -112,4 +134,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default AddGoalScreen
+export default withHttp()(AddGoalScreen)
