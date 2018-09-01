@@ -1,9 +1,14 @@
-import { UPDATE_APP_USER, SET_APP_USER, SET_TOKEN, SET_REFRESH_TOKEN } from '../actions'
+import {UPDATE_APP_USER, SET_API_KEY, SET_APP_USER, SET_TOKEN, SET_REFRESH_TOKEN, SET_NEW_GOAL} from '../actions'
 
 const initialState = {
-    user: null,
     token: '',
-    refresh_token: ''
+    apiKey: '',
+    newGoal: {
+        operator: null,
+        amount: null,
+        transaction_id: null,
+        period: null
+    }
 }
 
 export default (state = initialState, action) => {
@@ -21,10 +26,20 @@ export default (state = initialState, action) => {
                 ...state,
                 user: action.payload
             }
+        case SET_NEW_GOAL:
+            return {
+                ...state,
+                newGoal: action.payload
+            }
         case SET_TOKEN:
             return {
                 ...state,
                 token: action.token
+            }
+        case SET_API_KEY:
+            return {
+                ...state,
+                apiKey: action.apiKey
             }
         case SET_REFRESH_TOKEN:
             return {

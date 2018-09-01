@@ -4,6 +4,8 @@ export const SET_APP_USER = 'SET_APP_USER'
 export const UPDATE_APP_USER = 'UPDATE_APP_USER'
 export const SET_REFRESH_TOKEN = 'SET_REFRESH_TOKEN'
 export const SET_TOKEN = 'SET_TOKEN'
+export const SET_API_KEY = 'SET_API_KEY'
+export const SET_NEW_GOAL = 'SET_NEW_GOAL'
 
 // Categories
 
@@ -16,6 +18,12 @@ export const UPDATE_CATEGORY = 'UPDATE_CATEGORY'
 
 export const ADD_CHARITIES = 'ADD_CHARITIES'
 export const UPDATE_CHARITY = 'UPDATE_CHARITY'
+
+// Goals
+
+export const ADD_GOALS = 'ADD_GOALS'
+export const ADD_GOAL = 'ADD_GOAL'
+export const UPDATE_GOAL = 'UPDATE_GOAL'
 
 export * from './Application'
 export * from './Categories'

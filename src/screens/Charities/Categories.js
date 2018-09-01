@@ -1,6 +1,6 @@
 import React from "react";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import {Text, View, SafeAreaView, StyleSheet, Button, ScrollView} from "react-native";
+import {Text, View, SafeAreaView, StyleSheet, Button, ScrollView, TouchableOpacity} from "react-native";
 import Title from "../../components/Title";
 import Container from "../../components/Container";
 import styled from "styled-components";
@@ -27,44 +27,37 @@ const Description = styled.Text`
     font-size: 12px;
 `;
 
-@withHttp(false)
 class CategoriesScreen extends React.Component {
-    state = {
-        categories: []
-    }
-
     fetchCharities = () => {
-        this.props.http.get('/charities.json')
-            .then(response => response.data.categories)
+        this.props.http.get('/charities')
+            .then(response => response.data.payload)
             .then(categories => this.props.onFetchCategories(categories))
             .catch(error => console.error(error))
     }
 
 
     componentDidMount() {
-        this.fetchCharities()
+        if (! this.props.categories.length > 0) {
+            this.fetchCharities()
+        }
     }
 
     render() {
         return (
             <View>
-                <Header />
+                <Header
+                    left={
+                        <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
+                            <Icon name="chevron-left" size={40} color="#fff" style={{paddingVertical: 5}}/>
+                        </TouchableOpacity>
+                    }
+                />
                 <ScrollView style={styles.container}>
                     <Container>
-                        <View style={{flexDirection: 'row'}}>
-                            <Title>Pick Your Charities</Title>
-                            <View style={{marginLeft: 'auto'}}>
-                                <Button
-                                    onPress={() => this.props.navigation.goBack()}
-                                    title="Back"
-                                    color="#2f83c8"
-                                    accessibilityLabel="Save your selection of charities"
-                                />
-                            </View>
-                        </View>
+                        <Title>Pick Your Charities</Title>
                     </Container>
 
-                    {this.state.categories.map(category => (
+                    {this.props.categories.map(category => (
                         <TouchableRipple key={category.name} onPress={() => this.props.navigation.navigate('SelectCharities', { category })}>
                             <Category>
                                 <Name>{category.name}</Name>
@@ -84,4 +77,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default CategoriesScreen
+export default withHttp()(CategoriesScreen)

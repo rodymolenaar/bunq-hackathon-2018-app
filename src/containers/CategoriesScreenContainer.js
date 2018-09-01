@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import CategoriesScreen from "../screens/Charities/Categories";
-import {addCategories} from "../actions";
+import {addCategories, addCharities} from "../actions";
 
 const mapStateToProps = state => {
     return {
@@ -11,7 +11,18 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         onFetchCategories: categories => {
-            dispatch(addCategories(categories))
+            dispatch(addCategories(categories.map(category => {
+                let charities = category.charities.map(charity => ({
+                    ...charity,
+                    category: category.name
+                }))
+
+                dispatch(addCharities(charities));
+
+                return {
+                    name: category.name
+                }
+            })))
         }
     }
 }

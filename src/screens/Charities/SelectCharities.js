@@ -1,6 +1,6 @@
 import React from "react";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import {Text, View, SafeAreaView, StyleSheet, Button, ScrollView} from "react-native";
+import {Text, View, SafeAreaView, StyleSheet, Button, ScrollView, TouchableOpacity} from "react-native";
 import Title from "../../components/Title";
 import Container from "../../components/Container";
 import styled from "styled-components";
@@ -28,29 +28,24 @@ const Description = styled.Text`
     font-size: 12px;
 `;
 
-@withHttp(false)
 class SelectCharitiesScreen extends React.Component {
     render() {
         return (
             <View>
-                <Header />
+                <Header
+                    left={
+                        <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
+                            <Icon name="chevron-left" size={40} color="#fff" style={{paddingVertical: 5}}/>
+                        </TouchableOpacity>
+                    }
+                />
                 <ScrollView style={styles.container}>
                     <Container>
-                        <View style={{flexDirection: 'row'}}>
-                            <Title>Pick Your Charities</Title>
-                            <View style={{marginLeft: 'auto'}}>
-                                <Button
-                                    onPress={() => this.props.navigation.goBack()}
-                                    title="Back"
-                                    color="#2f83c8"
-                                    accessibilityLabel="Save your selection of charities"
-                                />
-                            </View>
-                        </View>
+                        <Title>Pick Your Charities</Title>
                         <SubTitle>{this.props.navigation.state.params.category.name}</SubTitle>
                     </Container>
 
-                    {this.props.navigation.state.params.category.charities.map(category => (
+                    {this.props.charities.map(category => (
                         <TouchableRipple key={category.name} onPress={() => console.warn('Category selected')}>
                             <Category>
                                 <Name>{category.name}</Name>
@@ -70,4 +65,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default SelectCharitiesScreen
+export default withHttp()(SelectCharitiesScreen)

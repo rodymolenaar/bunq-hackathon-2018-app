@@ -1,30 +1,38 @@
 import { AsyncStorage } from 'react-native'
 import axios from 'axios'
 import Config from './Config'
+import store from './store'
+import {setAppUser, setRefreshToken, setToken} from "./actions";
 
 class TokenService {
     static async getUser() {
-        let auth = JSON.parse(await AsyncStorage.getItem('auth'))
+        if (store.getState().application.user === undefined) {
+            let user = JSON.parse(await AsyncStorage.getItem('user'))
 
-        if (auth && auth.user !== undefined) {
-            return auth.user
+            store.dispatch(setAppUser(user))
         }
+
+        return store.application.user
     }
 
     static async getToken() {
-        let auth = JSON.parse(await AsyncStorage.getItem('auth'))
+        if (store.getState().application.token === undefined) {
+            let token = await AsyncStorage.getItem('token', '')
 
-        if (auth && auth.access_token !== undefined) {
-            return auth.access_token
+            store.dispatch(setToken(token))
         }
+
+        return store.getState().application.token
     }
 
     static async getRefreshToken() {
-        let auth = JSON.parse(await AsyncStorage.getItem('auth'))
+        if (store.getState().application.refresh_token === undefined) {
+            let token = await AsyncStorage.getItem('refresh_token')
 
-        if (auth && auth.refresh_token !== undefined) {
-            return auth.refresh_token
+            store.dispatch(setRefreshToken(refresh_token))
         }
+
+        return store.application.refresh_token
     }
 
     static async issueNewToken() {
@@ -34,9 +42,13 @@ class TokenService {
                 'refresh_token': await this.getRefreshToken(),
             });
 
-            await AsyncStorage.setItem('auth', JSON.stringify(response.data))
+            let { token } = response.data;
 
-            return response.data.access_token
+            await AsyncStorage.setItem('token', token);
+
+            store.dispatch(setToken(token));
+
+            return token
         } catch (error) {
             return Promise.reject(error)
         }

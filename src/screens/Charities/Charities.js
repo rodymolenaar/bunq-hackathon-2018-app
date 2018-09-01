@@ -1,10 +1,11 @@
 import React from "react";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { Text, View, SafeAreaView, StyleSheet, Button } from "react-native";
+import {Text, View, SafeAreaView, StyleSheet, Button, ScrollView} from "react-native";
 import Title from "../../components/Title";
 import Container from "../../components/Container";
 import styled from "styled-components";
 import Header from "../../components/Header";
+import NoApiKey from "../../components/NoApiKey";
 
 const Charity = styled.View`
     padding-vertical: 14px;
@@ -38,35 +39,38 @@ class CharitiesScreen extends React.Component {
 
     render() {
         return (
-            <View>
+            <View style={{flexGrow: 1}}>
                 <Header />
-                <View style={styles.container}>
-                    <Container>
-                        <View style={{flexDirection: 'row'}}>
-                            <Title>Charities</Title>
-                            <View style={{marginLeft: 'auto'}}>
-                                <Button
-                                    onPress={() => this.props.navigation.navigate('Categories')}
-                                    title="Edit"
-                                    color="#841584"
-                                    accessibilityLabel="Edit your selection of charities"
-                                />
+                <ScrollView style={{flexGrow: 1}}>
+                    <NoApiKey />
+                    <View style={styles.container}>
+                        <Container>
+                            <View style={{flexDirection: 'row'}}>
+                                <Title>Charities</Title>
+                                <View style={{marginLeft: 'auto'}}>
+                                    <Button
+                                        onPress={() => this.props.navigation.navigate('Categories')}
+                                        title="Edit"
+                                        color="#2f83c8"
+                                        accessibilityLabel="Edit your selection of charities"
+                                    />
+                                </View>
                             </View>
-                        </View>
 
-                        <Text style={{marginBottom: 16}}>
-                            You'll donate to these charities when you do not meet your goals.
-                        </Text>
+                            <Text style={{marginBottom: 16}}>
+                                You'll donate to these charities when you do not meet your goals.
+                            </Text>
 
-                    </Container>
+                        </Container>
 
-                    {this.state.charities.map(charity => (
-                        <Charity key={charity.id}>
-                            <Name>{charity.name}</Name>
-                            <Description>{charity.iban}</Description>
-                        </Charity>
-                    ))}
-                </View>
+                        {this.state.charities.map(charity => (
+                            <Charity key={charity.id}>
+                                <Name>{charity.name}</Name>
+                                <Description>{charity.iban}</Description>
+                            </Charity>
+                        ))}
+                    </View>
+                </ScrollView>
             </View>
         );
     }
